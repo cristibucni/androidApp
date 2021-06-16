@@ -1,68 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:paddingLeft="46dp"
+    android:paddingRight="46dp"
     android:paddingTop="16dp"
     tools:context="com.exam.AndroidApp.loginsignup.MainActivity">
-
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/user_login"
+        android:textColor="#000"
+        android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="User Login "
-        android:textColor="#000"
-        android:textSize="20dp" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="Enter Email"
-        android:textColor="#000"
-        android:ems="10"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:id="@+id/editEmail"
-        android:gravity="center"/>
-
-    <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Enter Password"
-        android:textColor="#000"
+        android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
-        android:layout_below="@+id/editEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/enter_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
         android:id="@+id/editPassword"
-        android:gravity="center"/>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     <Button
+        android:id="@+id/buttonLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonLogin"
-        android:layout_below="@+id/editPassword"
         android:layout_marginTop="20dp"
-        android:text="Log IN "/>
+        android:text="@string/log_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonLogin"
         android:layout_marginTop="20dp"
-        android:text="NOT A USER? | SIGN UP" />
+        android:text="@string/not_a_user_sign_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
-</RelativeLayout>
+    <com.google.android.gms.common.internal.SignInButtonImpl
+        android:id="@+id/buttonGoogle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/google"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+        tools:layout_editor_absoluteX="20dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

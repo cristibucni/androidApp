@@ -4,9 +4,8 @@
     android:id="@+id/activity_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:paddingLeft="46dp"
+    android:paddingRight="46dp"
     android:paddingTop="16dp"
     tools:context="com.exam.AndroidApp.loginsignup.RegisterActivity">
 
@@ -16,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="User Sign Up"
         android:textColor="#000"
@@ -28,9 +28,9 @@
         android:hint="Enter Name"
         android:textColor="#000"
         android:ems="10"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:id="@+id/editName"
         android:gravity="center"/>
 

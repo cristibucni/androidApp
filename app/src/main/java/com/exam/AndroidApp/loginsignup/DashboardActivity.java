@@ -1,22 +1,21 @@
 package com.exam.AndroidApp.loginsignup;
 import android.content.Intent;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.exam.AndroidApp.animator.AnimatorActivity;
 import com.exam.AndroidApp.camera.CameraActivity;
@@ -50,11 +49,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
 
 
-//        // Adding click listener to Log Out button.
+        // Adding click listener to Log Out button.
 //        LogOUT.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//
+//                FirebaseAuth.getInstance().signOut();//logout
+//                startActivity(new Intent(getApplicationContext(),MainActivity.class));
 //                //Finishing current DashBoard activity on button click.
 //                finish();
 //
