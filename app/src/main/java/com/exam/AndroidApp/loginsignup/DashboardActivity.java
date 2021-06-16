@@ -21,6 +21,7 @@ import com.exam.AndroidApp.animator.AnimatorActivity;
 import com.exam.AndroidApp.camera.CameraActivity;
 import com.exam.AndroidApp.nav.ProfileFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -201,8 +202,12 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     }
 
     private void logout(){
+        FirebaseAuth.getInstance().signOut();//logout
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        //Finishing current DashBoard activity on button click.
         finish();
-        Toast.makeText(DashboardActivity.this,"Log out successfully", Toast.LENGTH_LONG).show();
+
+        Toast.makeText(DashboardActivity.this,"Log out successfuly", Toast.LENGTH_LONG).show();
     }
 
 }
