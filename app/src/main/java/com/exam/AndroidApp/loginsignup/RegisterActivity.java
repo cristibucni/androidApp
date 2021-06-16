@@ -1,7 +1,5 @@
 package com.exam.AndroidApp.loginsignup;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,13 +30,6 @@ public class RegisterActivity extends AppCompatActivity {
     //public static boolean NameHolder;
     EditText Email, Password, Name ;
     Button Register;
-    String NameHolder, EmailHolder, PasswordHolder;
-    Boolean EditTextEmptyHolder;
-    SQLiteDatabase sqLiteDatabaseObj;
-    String SQLiteDataBaseQueryHolder ;
-    SQLiteHelper sqLiteHelper;
-    Cursor cursor;
-    String F_Result = "Not_Found";
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -58,13 +49,6 @@ public class RegisterActivity extends AppCompatActivity {
         Name = (EditText)findViewById(R.id.editName);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-
-
-
-
-
-
-
 
 
         // Adding click listener to register button.
