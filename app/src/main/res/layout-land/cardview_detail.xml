@@ -28,39 +28,40 @@
 
 
             <TextView
-                android:id="@+id/Salery"
+                android:id="@+id/Difficulty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@id/taskName"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="20sp"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="12sp"
                 android:text="30"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/person_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Salery"
-                android:paddingTop="12dp"
-                android:paddingRight="8dp"
-                android:paddingBottom="4dp"
-                android:text="Person Name"
-                android:textColor="#000"
                 android:textSize="21sp" />
 
             <TextView
-                android:id="@+id/person_subtext"
+                android:id="@+id/taskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Task name"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/project"
                 android:layout_width="222dp"
                 android:layout_height="57dp"
-                android:layout_below="@id/Salery"
-                android:layout_marginLeft="358dp"
-                android:layout_toRightOf="@id/person_name"
+                android:layout_below="@id/taskName"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20sp"
+                android:layout_toRightOf="@id/taskName"
                 android:paddingTop="12dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="4dp"
-                android:text="Person SubText"
+                android:text="Project"
                 android:textAlignment="textEnd"
                 android:textColor="#000"
                 android:textSize="21sp" />

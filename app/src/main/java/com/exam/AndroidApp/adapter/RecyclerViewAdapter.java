@@ -13,8 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.exam.AndroidApp.data.Data;
-import com.exam.AndroidApp.loginsignup.DetailActivity;
-import com.exam.AndroidApp.loginsignup.R;
+import com.exam.AndroidApp.main.DetailActivity;
+import com.exam.AndroidApp.main.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,20 +30,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         CardView cv;
         TextView name;
         TextView subText;
-        TextView memberPhoto;
+        TextView difficulty;
 
         public RecyclerViewViewHolder(View itemView){
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            name = (TextView)itemView.findViewById(R.id.person_name);
-            subText = (TextView)itemView.findViewById(R.id.person_subtext);
-            memberPhoto = (TextView)itemView.findViewById(R.id.Salery);
+            name = (TextView)itemView.findViewById(R.id.taskName);
+            subText = (TextView)itemView.findViewById(R.id.project);
+            difficulty = (TextView)itemView.findViewById(R.id.Difficulty);
         }
 
         public void bind(Data data){
-            name.setText(data.getTitle());
-            subText.setText(data.getLocation());
-            memberPhoto.setText(data.getJobType());
+            name.setText(data.getTaskName());
+            subText.setText(data.getStatus());
+            difficulty.setText(data.getDifficulty());
         }
     }
 
@@ -63,10 +63,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(final RecyclerViewViewHolder holder, final int position) {
         final Data data = mItemList.get(position);
         holder.bind(data);
-
-//        holder.name.setText(mItemList.get(position).name);
-//        holder.subText.setText(mItemList.get(position).subText);
-//        holder.memberPhoto.setImageResource(mItemList.get(position).photoId);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,13 +1,12 @@
 package com.exam.AndroidApp.animator;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.exam.AndroidApp.loginsignup.R;
+import com.exam.AndroidApp.main.R;
 
 
 public class AnimatorActivity extends AppCompatActivity {
