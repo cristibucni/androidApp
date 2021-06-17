@@ -1,4 +1,4 @@
-package com.exam.AndroidApp.loginsignup;
+package com.exam.AndroidApp.main;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -19,7 +19,7 @@ import android.widget.SearchView;
 
 import com.exam.AndroidApp.adapter.RecyclerViewAdapter;
 import com.exam.AndroidApp.data.Data;
-import com.exam.AndroidApp.loginsignup.R;
+import com.exam.AndroidApp.main.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,7 +90,7 @@ public class ProfileFragment extends Fragment implements SearchView.OnQueryTextL
 
         final List<Data> filteredModelList = new ArrayList<>();
         for (Data data : datas) {
-            final String text = data.getTitle().toLowerCase().trim();
+            final String text = data.getTaskName().toLowerCase().trim();
             if (text.contains(newText)) {
                 filteredModelList.add(data);
             }

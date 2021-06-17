@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">Android app 2021</string>
+    <string name="app_name">Android Examen Master</string>
     <string name="toolbar_title">Dashboard</string>
-    <string name="navigation_drawer_open">Open Navigation Drawer</string>
-    <string name="navigation_drawer_close">Close Navigation Drawer</string>
-    <!-- TODO: Remove or change this placeholder text -->
-
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="google">GOOGLE SIGN UP</string>
     <string name="not_a_user_sign_up">NOT A USER? | SIGN UP</string>

@@ -7,7 +7,7 @@
     android:paddingLeft="46dp"
     android:paddingRight="46dp"
     android:paddingTop="16dp"
-    tools:context="com.exam.AndroidApp.loginsignup.RegisterActivity">
+    tools:context="com.exam.AndroidApp.main.RegisterActivity">
 
     <TextView
         android:id="@+id/textView"
